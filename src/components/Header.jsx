@@ -1,6 +1,9 @@
 import React from "react";
 
 export default function Header() {
+
+  const imageUrl = window.location.href + "rainbow.png" || "../../public/rainbow.png";
+  
   return (
     <header
       className="header"
@@ -15,7 +18,7 @@ export default function Header() {
       }}
     >
       <img
-        src="../../public/rainbow.png"
+        src={imageUrl}
         style={{
           width: "30px",
           marginRight: "10px"
