@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: #f4f6f9;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  background: #2563eb;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.main-layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* ---- Drawer (control panel) ---- */
+.drawer-toggle {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.75rem 0.5rem;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  z-index: 1000;
+}
+.drawer {
+  position: fixed;
+  left: -360px;
+  top: 0;
+  width: 340px;
+  height: 100vh;
+  background: white;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease;
+  padding: 1.5rem;
+  overflow-y: auto;
+  z-index: 999;
+}
+.drawer.open {
+  left: 0;
+}
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.drawer-header h3 {
+  margin: 0;
+}
+.close-drawer {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.control-section {
+  margin-bottom: 1.5rem;
+  background: #fafbfc;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+.control-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.style-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+.style-btn {
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.style-btn.active,
+.style-btn:hover {
+  background: #0091a5;
+  color: white;
+  border-color: #0091a5;
+}
+
+.generate-btn {
+  width: 100%;
+  padding: 1rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.generate-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ---- Text input (left) ---- */
+.text-input-section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  height: fit-content;
+}
+.large-textarea {
+  width: 100%;
+  min-height: 420px;
+  padding: 1rem;
+  font-size: 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  resize: vertical;
+}
+.input-group {
+  margin-bottom: 1rem;
+}
+.input-group label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+.input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+/* ---- Preview (right) ---- */
+.canvas-preview {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  /* overflow: auto; */
+}
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.page-wrapper {
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+.page-content {
+  position: relative;
+  background: white;
+}
+
+/* Lined background */
+.page-content.lined {
+  background: linear-gradient(
+      transparent 38px,
+      #e0e0e0 38px,
+      #e0e0e0 40px,
+      transparent 40px
+    ),
+    linear-gradient(
+      90deg,
+      transparent 38px,
+      #e0e0e0 38px,
+      #e0e0e0 40px,
+      transparent 40px
+    );
+  background-size: 40px 40px;
+}
+
+/* Header / Footer inside page */
+.page-header {
+  margin-bottom: 1rem;
+  font-size: 0.85em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+.page-footer {
+  margin-top: 2rem;
+  font-size: 0.75em;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding-top: 0.5rem;
+}
+
+/* ---- Drop zone ---- */
+.drop-zone {
+  border: 2px dashed #bbb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  background: #fafafa;
+  cursor: pointer;
+}
+.drop-zone.drag-over {
+  background: #e6f7ff;
+  border-color: #2563eb;
+}
+.drop-label {
+  display: block;
+  color: #555;
+  font-size: 0.9rem;
+}
+.error-msg {
+  color: #dc2626;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 992px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+  .drawer-toggle {
+    display: block;
+  }
+}
+
+.page-content.lined {
+  background: linear-gradient(
+      transparent 38px,
+      #e0e0e0 38px,
+      #e0e0e0 40px,
+      transparent 40px
+    ),
+    linear-gradient(
+      90deg,
+      transparent 38px,
+      #e0e0e0 38px,
+      #e0e0e0 40px,
+      transparent 40px
+    );
+  background-size: 40px 40px;
+}
+
+
+
+
+
+/* Apply globally */
+::-webkit-scrollbar {
+  width: 5px;              /* Width of vertical scrollbar */
+  height: 5px;             /* Height of horizontal scrollbar */
+}
+
+/* Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+/* Scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background: #9e9d9d;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9e9d9d;
+}
+
+
+
+:root {
+  --font-base: 'Poppins', sans-serif;
+}
+
+html, body {
+  font-family: var(--font-base);
+}

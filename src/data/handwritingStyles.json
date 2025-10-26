@@ -1,0 +1,120 @@
+{
+  "styles": [
+    {
+      "id": "cursive1",
+      "name": "Cursive 1",
+      "fontFamily": "'Caveat', cursive"
+    },
+    {
+      "id": "print1",
+      "name": "Print 1",
+      "fontFamily": "'Reenie Beanie', cursive"
+    },
+    {
+      "id": "slanted",
+      "name": "Slanted",
+      "fontFamily": "'Indie Flower', cursive"
+    },
+    {
+      "id": "bold",
+      "name": "Bold Script",
+      "fontFamily": "'Dancing Script', cursive",
+      "fontWeight": "700"
+    },
+    {
+      "id": "custom",
+      "name": "Custom Hand",
+      "fontFamily": "'Architects Daughter', cursive"
+    },
+    {
+      "id": "elegant",
+      "name": "Elegant Script",
+      "fontFamily": "'Pacifico', cursive"
+    },
+    {
+      "id": "casual",
+      "name": "Casual Note",
+      "fontFamily": "'Patrick Hand', cursive"
+    },
+    {
+      "id": "messy",
+      "name": "Messy Write",
+      "fontFamily": "'Permanent Marker', cursive"
+    },
+    {
+      "id": "neat",
+      "name": "Neat Hand",
+      "fontFamily": "'Kalam', cursive"
+    },
+    {
+      "id": "sketchy",
+      "name": "Sketchy",
+      "fontFamily": "'Shadows Into Light', cursive"
+    },
+    {
+      "id": "teacher",
+      "name": "Teacher's Hand",
+      "fontFamily": "'Schoolbell', cursive"
+    },
+    {
+      "id": "signature",
+      "name": "Signature Style",
+      "fontFamily": "'Allura', cursive"
+    },
+    {
+      "id": "journal",
+      "name": "Journal",
+      "fontFamily": "'Handlee', cursive"
+    },
+    {
+      "id": "playful",
+      "name": "Playful",
+      "fontFamily": "'Covered By Your Grace', cursive"
+    },
+    {
+      "id": "smooth",
+      "name": "Smooth Flow",
+      "fontFamily": "'Nothing You Could Do', cursive"
+    },
+    {
+      "id": "friendly",
+      "name": "Friendly Hand",
+      "fontFamily": "'Gloria Hallelujah', cursive"
+    },
+    {
+      "id": "tall",
+      "name": "Tall Script",
+      "fontFamily": "'Just Another Hand', cursive"
+    },
+    {
+      "id": "crafty",
+      "name": "Crafty Note",
+      "fontFamily": "'Crafty Girls', cursive"
+    },
+    {
+      "id": "girlnextdoor",
+      "name": "Girl Next Door",
+      "fontFamily": "'The Girl Next Door', cursive"
+    },
+    {
+      "id": "refined",
+      "name": "Refined Script",
+      "fontFamily": "'Great Vibes', cursive"
+    },
+    {
+      "id": "stylish",
+      "name": "Stylish Flow",
+      "fontFamily": "'Sacramento', cursive"
+    },
+    {
+      "id": "marker",
+      "name": "Marker Style",
+      "fontFamily": "'Rock Salt', cursive"
+    },
+    {
+      "id": "narrow",
+      "name": "Narrow Write",
+      "fontFamily": "'Amatic SC', cursive"
+    }
+  ]
+}
